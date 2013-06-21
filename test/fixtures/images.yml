@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  image_url: MyString
+  user_id: 1
+  listing_id: 1
+
+two:
+  name: MyString
+  image_url: MyString
+  user_id: 1
+  listing_id: 1

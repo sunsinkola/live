@@ -1,0 +1,33 @@
+<% title "Listings" %>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Rent</th>
+    <th>name</th>
+    <th>Sqft</th>
+    <th>Beds</th>
+    <th>Baths</th>
+    <th>Longitude</th>
+    <th>latitude</th>
+    <th>User</th>
+  </tr>
+  <% for listing in @listings %>
+    <tr>
+      <td><%= listing.address %></td>
+      <td><%= listing.rent %></td>
+      <td><%= listing.name %></td>
+      <td><%= listing.sqft %></td>
+      <td><%= listing.beds %></td>
+      <td><%= listing.baths %></td>
+      <td><%= listing.longitude %></td>
+      <td><%= listing.latitude %></td>
+      <td><%= listing.user_id %></td>
+      <td><%= link_to "Show", listing %></td>
+      <td><%= link_to "Edit", edit_listing_path(listing) %></td>
+      <td><%= link_to "Destroy", listing, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Listing", new_listing_path %></p>

@@ -1,0 +1,30 @@
+
+<%= simple_form_for(@listing, :html => {:class => 'form-horizontal', :multipart => true}) do |f| %>
+  <%= f.error_notification %>
+  <div class="row">
+    <div class="span4">
+      <%= f.input :rent, :as => :string, :placeholder => "USD Dollars" %>
+      <%= f.input :address, :as => :text, :placeholder => "123 Example Street", :input_html => { :rows => 4 } %>
+    </div>
+    <div class="span3">
+      <%= f.input :sqft, :label => "Square Footage", :as => :string, :placeholder => "Pospects love this info!" %>
+      <%= f.input :beds, :as => :string %>
+      <%= f.input :baths, :as => :string %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="span12">
+      <%= f.input :name, :as => :text, :input_html => { :class => "span10", :rows => 10 }, :placeholder => "Tell renters why they should live here." %>
+    </div>
+  </div>
+    <%= f.input :longitude, :as => :hidden %>
+    <%= f.input :latitude, :as => :hidden %>
+    <%= f.input :user_id, :as => :hidden %>
+
+  <%= f.button :submit, :class => "btn btn-primary" %>
+  <%= link_to "Back", homes_path, :class => "btn btn-danger" %>  
+
+<% end %>
+
+

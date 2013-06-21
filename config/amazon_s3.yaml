@@ -1,0 +1,11 @@
+development:  
+    access_key_id: AKIAIEOI6ZMLYMIJRA6A
+    secret_access_key: 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
+  
+staging:  
+    access_key_id: AKIAIEOI6ZMLYMIJRA6A
+    secret_access_key: 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 
+  
+production:  
+    access_key_id: AKIAIEOI6ZMLYMIJRA6A
+    secret_access_key: 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

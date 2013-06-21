@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <%= include_gon %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDSXrmzHIgr8P-_mwkZz2puSiAL4QM3Otk&sensor=true", "application" %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+	<%= render 'layouts/nav'%>	
+    <div class="container">
+	  <div class="row-fluid">
+		<div class="span12">
+	      <% flash.each do |name, msg| %>
+	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	      <% end %>
+	      <%= content_tag :h1, yield(:title) if show_title? %>
+	      <%= yield %>
+		</div>
+	  </div>
+    </div>
+  </body>
+</html>

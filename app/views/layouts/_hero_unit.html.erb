@@ -1,0 +1,12 @@
+<div class="hero-unit">
+	<h1>
+		LiveOlympus 
+	</h1>
+	<p>A Place.<strong> That Is You.</strong> To Be Happy.</p>
+	<% unless current_user.nil? %>
+		<%= link_to '<i class="icon-plus"> </i>List A Place'.html_safe, new_listing_path, :class=>"btn btn-primary" %>
+	<% else %>
+		<%= link_to '<i class="icon-user"> </i>Sign up!'.html_safe, new_user_registration_path, :class=>"btn btn-primary" %>	
+	<% end %>
+	<p>
+</div>

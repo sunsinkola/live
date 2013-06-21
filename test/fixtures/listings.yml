@@ -1,0 +1,21 @@
+one:
+  address: MyString
+  rent: 9.99
+  name: MyText
+  sqft: 9.99
+  beds: 1
+  baths: 9.99
+  longitude: 1.5
+  latitude: 1.5
+  user_id: 1
+
+two:
+  address: MyString
+  rent: 9.99
+  name: MyText
+  sqft: 9.99
+  beds: 1
+  baths: 9.99
+  longitude: 1.5
+  latitude: 1.5
+  user_id: 1

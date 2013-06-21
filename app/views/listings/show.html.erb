@@ -1,0 +1,46 @@
+<% title "#{number_to_currency(@listing.rent, :precision => 0)} @ #{@listing.address.upcase}" %>
+
+<div class="row">
+  <div class="span6">
+    <% unless @listing.images.present? %>
+    <%=@listing.id %>
+      <%= link_to "Add Image", images_path(:id => @listing.id) %> 
+    <% else %>
+      <%= image_tag(@listing.images.first) %>
+    <% end %>
+  </div>
+  <div class="span6">
+    <table class="table table-hover">
+      <caption> The Specifics</caption>
+      <thead>
+        <tr>
+          <th><strong>Square feet</strong></th>
+          <th><strong>Beds</strong></th>
+          <th><strong>Baths</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @listing.sqft %></td>
+          <td><%= @listing.beds %></td>
+          <td><%= @listing.baths %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="map_canvas"></div>
+  </div>
+</div>
+<br>
+<div class="row well">
+  <p>
+    <strong>name:</strong>
+    <%= @listing.name %>
+  </p>
+</div>
+<div class="row">
+  <p>
+    <%= link_to "Edit", edit_listing_path(@listing) %> |
+    <%= link_to "Destroy", @listing, :confirm => 'Are you sure?', :method => :delete %> |
+    <%= link_to "View All", listings_path %>
+  </p>
+</div>

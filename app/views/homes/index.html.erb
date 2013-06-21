@@ -1,0 +1,13 @@
+<%= render "layouts/hero_unit"%>
+
+<div id="container">
+	<% for listing in @listings %>
+		<%= link_to listing do %>
+			<div class="item"><%= image_tag listing.images.first %></div>
+		<% end %>
+	<% end %>
+</div>
+
+
+	
+	
