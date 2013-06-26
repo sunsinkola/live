@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
-//= require jquery-fileupload
+//= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
 //= require twitter/bootstrap
+//= require s3_direct_upload
 //= require_tree .

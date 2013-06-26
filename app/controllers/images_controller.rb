@@ -2,6 +2,7 @@ class ImagesController < ApplicationController
   def index
     @current_listing = current_user.listings.find(params[:id])
     @images = @current_listing.images.all
+    @all= Image.all
   end
 
   def show
@@ -9,11 +10,13 @@ class ImagesController < ApplicationController
   end
 
   def new
-    @image = current_user.images.build
+    @image = current_user.images.new
   end
 
   def create
-    @image = current_user.images.build(params[:image])
+    @listing = Listing.find(params[:listing_id])
+    @image = @listing.images.build(params[:image])
+    @image.user = User.find(current_user.id)
   end
 
   def edit

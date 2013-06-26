@@ -3,7 +3,7 @@
 <div id="container">
 	<% for listing in @listings %>
 		<%= link_to listing do %>
-			<div class="item"><%= image_tag listing.images.first %></div>
+			<div class="item"><%= image_tag listing.images.all %></div>
 		<% end %>
 	<% end %>
 </div>

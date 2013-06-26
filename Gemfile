@@ -6,7 +6,7 @@ gem 'devise'
 # layouts and helpers generation
 gem "nifty-generators", :group => :development
 # for Amazon S3  
-gem "aws-sdk"
+#gem "aws-sdk"
 # for image handling
 #gem 'carrierwave'
 gem 'rmagick', '2.13.2'
@@ -17,6 +17,12 @@ gem 'geocoder'
 gem 'google_places'
 # for passing rails to js
 gem 'gon'
+# for setting ENV[] variables
+#gem 'figaro'
+# for using Thing server
+gem 'thin'
+# for direct upload using AmazonS3, jquery-file-upload
+gem 's3_direct_upload'
 
 
 gem 'rails', '3.2.11'
@@ -44,7 +50,7 @@ group :assets do
   #for Jquery ui
   gem 'jquery-ui-rails'
   #jquery multiple file upload
-  gem 'jquery-fileupload-rails'
+  #gem 'jquery-fileupload-rails'
 end
 
 gem 'jquery-rails'
